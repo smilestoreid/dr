@@ -65,10 +65,10 @@ IMPORTANT: Some options will require "make clean" after changes */
 /* Enable TCP Fowarding */
 /* 'Local' is "-L" style (client listening port forwarded via server)
  * 'Remote' is "-R" style (server listening port forwarded via client) */
-#define DROPBEAR_CLI_LOCALTCPFWD 1
+#define DROPBEAR_CLI_LOCALTCPFWD 0
 #define DROPBEAR_CLI_REMOTETCPFWD 0
 
-#define DROPBEAR_SVR_LOCALTCPFWD 1
+#define DROPBEAR_SVR_LOCALTCPFWD 0
 #define DROPBEAR_SVR_REMOTETCPFWD 0
 
 /* Enable Authentication Agent Forwarding */
