@@ -65,15 +65,15 @@ IMPORTANT: Some options will require "make clean" after changes */
 /* Enable TCP Fowarding */
 /* 'Local' is "-L" style (client listening port forwarded via server)
  * 'Remote' is "-R" style (server listening port forwarded via client) */
-#define DROPBEAR_CLI_LOCALTCPFWD 0
+#define DROPBEAR_CLI_LOCALTCPFWD 1
 #define DROPBEAR_CLI_REMOTETCPFWD 0
 
-#define DROPBEAR_SVR_LOCALTCPFWD 0
+#define DROPBEAR_SVR_LOCALTCPFWD 1
 #define DROPBEAR_SVR_REMOTETCPFWD 0
 
 /* Enable Authentication Agent Forwarding */
-#define DROPBEAR_SVR_AGENTFWD 1
-#define DROPBEAR_CLI_AGENTFWD 1
+#define DROPBEAR_SVR_AGENTFWD 0
+#define DROPBEAR_CLI_AGENTFWD 0
 
 /* Note: Both DROPBEAR_CLI_PROXYCMD and DROPBEAR_CLI_NETCAT must be set to
  * allow multihop dbclient connections */
@@ -84,7 +84,7 @@ IMPORTANT: Some options will require "make clean" after changes */
 
 /* Enable "Netcat mode" option. This will forward standard input/output
  * to a remote TCP-forwarded connection */
-#define DROPBEAR_CLI_NETCAT 1
+#define DROPBEAR_CLI_NETCAT 0
 
 /* Whether to support "-c" and "-m" flags to choose ciphers/MACs at runtime */
 #define DROPBEAR_USER_ALGO_LIST 1
