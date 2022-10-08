@@ -65,15 +65,15 @@ IMPORTANT: Some options will require "make clean" after changes */
 /* Enable TCP Fowarding */
 /* 'Local' is "-L" style (client listening port forwarded via server)
  * 'Remote' is "-R" style (server listening port forwarded via client) */
-#define DROPBEAR_CLI_LOCALTCPFWD 0
-#define DROPBEAR_CLI_REMOTETCPFWD 0
+#define DROPBEAR_CLI_LOCALTCPFWD 1
+#define DROPBEAR_CLI_REMOTETCPFWD 1
 
-#define DROPBEAR_SVR_LOCALTCPFWD 0
-#define DROPBEAR_SVR_REMOTETCPFWD 0
+#define DROPBEAR_SVR_LOCALTCPFWD 1
+#define DROPBEAR_SVR_REMOTETCPFWD 1
 
 /* Enable Authentication Agent Forwarding */
-#define DROPBEAR_SVR_AGENTFWD 0
-#define DROPBEAR_CLI_AGENTFWD 0
+#define DROPBEAR_SVR_AGENTFWD 1
+#define DROPBEAR_CLI_AGENTFWD 1
 
 /* Note: Both DROPBEAR_CLI_PROXYCMD and DROPBEAR_CLI_NETCAT must be set to
  * allow multihop dbclient connections */
@@ -137,11 +137,11 @@ IMPORTANT: Some options will require "make clean" after changes */
  * code (either ECDSA or ECDH) increases binary size - around 30kB
  * on x86-64.
  * See: ECDSA_PRIV_FILENAME  */
-#define DROPBEAR_ECDSA 1
+#define DROPBEAR_ECDSA 0
 /* Ed25519 is faster than ECDSA. Compiling in Ed25519 code increases
  * binary size - around 7,5kB on x86-64.
  * See: ED25519_PRIV_FILENAME  */
-#define DROPBEAR_ED25519 1
+#define DROPBEAR_ED25519 0
 /* SK_ECDSA/SK_ED25519 allows u2f security keys for public key auth.
  * This is currently server-only. */
 #define DROPBEAR_SK_ECDSA 1
@@ -202,7 +202,7 @@ group1 in Dropbear server too */
 #define DROPBEAR_ZLIB_WINDOW_BITS 15 
 
 /* Whether to do reverse DNS lookups. */
-#define DO_HOST_LOOKUP 0
+#define DO_HOST_LOOKUP 1
 
 /* Whether to print the message of the day (MOTD). */
 #define DO_MOTD 0
