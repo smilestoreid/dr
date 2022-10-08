@@ -137,11 +137,11 @@ IMPORTANT: Some options will require "make clean" after changes */
  * code (either ECDSA or ECDH) increases binary size - around 30kB
  * on x86-64.
  * See: ECDSA_PRIV_FILENAME  */
-#define DROPBEAR_ECDSA 0
+#define DROPBEAR_ECDSA 1
 /* Ed25519 is faster than ECDSA. Compiling in Ed25519 code increases
  * binary size - around 7,5kB on x86-64.
  * See: ED25519_PRIV_FILENAME  */
-#define DROPBEAR_ED25519 0
+#define DROPBEAR_ED25519 1
 /* SK_ECDSA/SK_ED25519 allows u2f security keys for public key auth.
  * This is currently server-only. */
 #define DROPBEAR_SK_ECDSA 1
